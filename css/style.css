@@ -1,0 +1,1968 @@
+:root {
+    /* color */
+    --color-black: #222831;
+    --color-gray: #393E46;
+    --color-white:  #EEEEEE;
+    --color-yellow:  #FFD369;
+  }
+  
+  
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+body {
+    color: var(--color-black);
+    font-family: 'NEXON Lv1 Gothic OTF';
+    width: 100%;
+    margin: 0 auto;
+}
+/* 상단 부분 */
+#header {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo img {
+    width: 110%;
+}
+#searchBox {
+    width: 40%;
+    line-height: 25px;
+    padding: 5px 10px;
+    border: 3px solid var(--color-black);
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+#searchBox form{
+    width: 100%;
+}
+#searchBox i {
+    padding-left: 8px;
+    border-left: 2px solid var(--color-black);
+}
+#searchBox input {
+    width: 90%;
+    outline: none;
+    border: none;
+}
+#searchBox button{
+    font-size: 14px;
+    margin-left: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#searchBox:hover {
+    border: 3px solid var(--color-yellow);
+}
+#headerList {
+    display: flex;
+}
+#headerList li {
+    padding: 0 10px;
+    font-size: 12px;
+    border-right: 1px solid var(--color-yellow);
+}
+#headerList li:last-child {
+    border-right: none;
+}
+
+/* 우측 고정 메뉴바 */
+#rightMenu {
+    width: 40px;
+    z-index: 20;
+    position: absolute;
+    top: 38%;
+    right: 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    background-color: #fff;
+    position: fixed;
+}
+#rightMenu li {
+    padding: 16px 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+#rightMenu li:first-child {
+    border-top: 0;
+}
+#rightMenu li:hover i {
+    color: #222831;
+}
+#rightMenu li i {
+    font-size: 14px;
+    color: #777;
+    transition: 0.5s;
+}
+
+/* 메뉴 바 부분 */
+#menuBar {
+    background-color: var(--color-black);
+}
+#menuBar #innerMenu {
+    background-color: var(--color-black);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-white);
+    position: relative;
+}
+#menuBar #mainList {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#menuBar #mainList li {
+    text-align: center;
+    width: 25%;
+    height: 50px;
+    line-height: 50px;
+    transition: 0.5s;
+}
+#menuBar #mainList li:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+#menuBar #mainList li a {
+    width: 100%;
+}
+#menuBar nav i {
+    width: 50px;
+    height: 50px;
+    padding-top: 18px;
+    text-align: center;
+    border-left: 1px solid var(--color-gray);
+    border-right: 1px solid var(--color-gray);
+    transition: 0.5s;
+}
+#menuBar nav i:hover {
+    width: 50px;
+    height: 50px;
+    padding-top: 18px;
+    text-align: center;
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+}
+
+/* 메인 부분 */
+main {
+    width: 100%;
+    min-height: 80vh;
+}
+
+/* 하단 부분 */
+/* 여백의 미 */
+#graybox {
+    width: 100%;
+    height: 300px;
+    margin-top: 160px;
+    background: #e8e8e8;
+    border-top: 1px solid #ccc;
+}
+#footerLine {
+    border-top:1px solid #666;
+    border-bottom: 1px solid #e8e8e8;
+}
+#bottomLine {
+    border-top: 1px solid #e8e8e8;
+}
+footer #bottomnav{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+footer #bottomnav ul{
+    display: flex;
+}
+footer #bottomnav ul:first-child li{
+    padding: 0 10px;
+    border-right: 1px solid #e8e8e8;
+    text-align: center;
+}
+footer #bottomnav ul:first-child li:nth-child(5){
+    border: none;
+}
+footer #bottomnav ul:nth-child(2) li{
+    padding: 0 5px;
+}
+footer #footermid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+#footermid .customer{
+    width: 31%;
+    padding-left: 0;
+}
+#footermid .customer p:nth-of-type(1){
+    font-size: 30px;
+    font-weight: bold;
+}
+#footermid .account{
+    width: 18%;
+}
+#footermid .favorite{
+    width: 18%;
+}
+#footermid .return{
+    width: 33%;
+    border: none;
+}
+#footermid div{
+    margin:30px 0 ;
+    padding: 0 20px;
+    border-right:1px solid #e8e8e8;
+}
+#footermid h4{
+    padding: 15px 0;
+}
+#footerbottom {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    font-size: 10px;
+    color: #777;
+}
+#footerbottom ul:nth-child(1),#footerbottom ul:nth-child(2){
+    display: flex;
+    align-items: center;
+}
+#footerbottom ul li{
+    font-weight: bold;
+    padding-right:20px;
+}
+#footerbottom ul li span{
+    font-weight: 300;
+}
+#footermid p{
+    font-size: 11px;
+}
+#footermid ul{
+    font-size: 11px;
+}
+/* innermenu */
+
+/* 숨겨진 메뉴 부분 */
+#hiddenMenu {
+    display: none;
+    width: 80%;
+    height: 300px;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    z-index: 1;
+    border-bottom: 1px solid #444;
+    border-left: 1px solid #444;
+    border-right: 1px solid #444;
+    background: rgba(255,255,255,0.97);
+    color:  var(--color-black);
+    padding: 20px;
+
+}
+#hiddenList {
+    display: flex;
+    justify-content: space-around;
+}
+#hiddenList > li {
+    width: 20%;
+    height: 50px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    line-height: 50px;
+}
+#hiddenList > li a {
+    line-height: 50px;
+}
+/* #hiddenList > li:hover {
+    font-weight: bold;
+} */
+.subList {  
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+.subList li {
+    text-align: left;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    color: #666;
+}  
+.subList li a {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+.subList li:hover {
+    background-color: #ccc;
+    color: #fff;
+}
+/* banner */
+#banner{
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+#imglists{
+    position: absolute;
+    top:0;
+    left: 0;
+    transition: 0.5s;
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+#imglists li{
+    width: 25%;
+    height: 400px;
+}
+#imglists li img{
+    width: 100%;
+    height: 400px;
+}
+.btn {
+    width: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #333;
+    font-size: 26px;
+    line-height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+div.btn{
+    display: none;
+}
+#banner:hover .btn{
+    display: block;
+}
+
+#nextbtn {
+    transform: translate(1100%, 15%);
+}
+#prevbtn {
+    transform: translate(-1200%, 15%);
+}
+#indi {
+    position:absolute;
+    bottom: 250px;
+    transform: translateY(235px);
+    width: 100%;
+    text-align: center;
+    padding: 10px;  
+}
+#recommendindi{
+    position:absolute;
+    bottom: 300px;
+    transform: translateY(235px);
+    width: 100%;
+    text-align: center;
+    padding: 10px;  
+}
+#indi span,#recommendindi span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    margin: 0 3px;
+    font-size: 0;
+  }
+#indi span.on ,#recommendindi span.on{
+  background-color: var(--color-yellow);
+}
+#indi span:hover ,#recommendindi span:hover{
+    background-color: var(--color-yellow);
+}
+#indi span:first-child,#recommendindi span:first-child {
+    display: none;
+}
+#indi span:last-child ,#recommendindi span:last-child{
+    display: none;
+}
+
+
+
+/* 추천상품 리스트 */
+#recommend {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 0;
+    height: 740px;
+    position: relative;
+}
+#recommend h2 {
+    text-align: center;
+    color: #222831;
+    padding-bottom: 40px;
+    font-size: 28px;
+}
+#recommendbox{
+    width: 100%;
+    overflow: hidden;
+    height: 500px;
+    position: relative;
+}
+.recomProduct {
+    width: 200%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 350px;
+}
+.recomProduct .productList {
+    padding: 0 10px;
+}
+.recomProduct .productList img {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.recomProduct .productList:hover #icon {
+    opacity: 1;
+}
+.product {
+    display: flex;
+    flex-direction: row;
+    height: 280px;
+}
+.product span {
+    font-weight: bold;
+    margin-top: 16px;
+    font-size: 14px;
+}
+#recommend .btn {
+    display: block;
+    z-index: 2;
+}
+#recommendprev{
+    transform:translateX(-1350%);
+}
+#recommendnext{
+    transform:translateX(1250%);
+}
+
+
+/* 베스트 5 */
+#best5 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 1000px;
+    padding: 120px 0;
+}
+#best5 h2 {
+    text-align: center;
+    color: #222831;
+    font-size: 28px;
+    padding: 40px 0;
+}
+
+/* 베스트5 메뉴바 */
+.best5Menu {
+    display: flex;
+    height: 60px;
+    background-color: #ccc;
+    margin: 40px 0;
+}
+.best5Menu .menu {
+    width: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.best5Menu .menu:first-child {
+    border-right: 1px solid #EEEEEE;
+}
+.best5Menu .menu:hover {
+    background-color: #393E46;
+    color: #FFD369;
+}
+
+/* TOP 5 리스트 */
+#top5List {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+#top5List .number {
+    display: flex;
+    justify-content: space-evenly;
+}
+#top5List .number li {
+    width: 18%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* 베스트 5 리스트 */
+#best5Product {
+    width: 100%;
+    margin: 20px 0;
+    height: 320px;
+}
+.best5List {
+    display: flex;
+    justify-content: space-evenly;
+}
+.best5List2 {
+    display: none;
+}
+.productlist2 {
+    width: 18%;
+    margin: 0 12px;
+}
+.productlist2:hover #icon {
+    opacity: 1;
+}
+.productlist2 img {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.productlist2 .product2 {
+    display: flex;
+    flex-direction: row;
+    height: 280px;
+}
+.product2 span {
+    color: #222831;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.priceSpan {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(212, 74, 74);
+}
+
+/* 상품 아이콘 */
+#icon {
+    width: 50%;
+    height: 20px;
+    margin: 10px 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+#icon i {
+    font-size: 16px;
+    color: #ccc;
+    padding-right: 8px;
+}
+
+/* 로그인페이지 */
+#loginpage {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#loginpage h2 {
+    font-size: 32px;
+    padding: 40px;
+}
+#loginborder {
+    width: 40%;
+    padding: 40px 80px;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+}
+#inputs input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #777;
+    padding: 10px;
+    margin: 10px 0;
+}
+.loginbtn button {
+    margin: 10px 0;
+    padding: 8px 0;
+    width: 100%;
+    border: 3px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.loginbtn button:hover {
+    border: 3px solid #222831;
+}
+.forgot {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+.forgot .span0 {
+    margin: 0 10px;
+}
+.login_join button{
+    margin-bottom: 20px;
+    padding: 8px 0;
+    width: 100%;
+    border: 3px solid #222831;
+    border-radius: 3px;
+    background-color: #222831;
+    color: #c8c8c8;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.login_join button:hover {
+    opacity: 0.9;
+}
+
+/* 회원가입 페이지 */
+.join{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px;
+}
+.join h2{
+    font-size: 28px;
+    text-align: start;
+    padding: 40px 0;
+}
+#joinForm {
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    padding: 40px 80px;
+}
+#joinTable {
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+}
+#joinTable tr {
+    border-bottom: 1px solid #222831;
+}
+#joinTable th {
+    width: 25%;
+    text-align: left;
+    font-size: 16px;
+}
+#joinTable th span {
+    margin-left: 10px;
+}
+#joinTable td {
+    width: 75%;
+    text-align: left;
+}
+#joinTable tr:last-child td {
+    text-align: center;
+    border-left: 0;
+}
+#joinTable input {
+    width: 35%;
+    padding: 5px 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.notice {
+    font-size: 12px;
+}
+.ididen {
+    padding: 4px 20px;
+    background-color: #e8e8e8;
+    border: 0;
+    border-radius: 3px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.ididen:hover {
+    background-color: #ccc;
+}
+.formBtn {
+    border: 0;
+    padding: 8px 30px; 
+    border-radius: 3px;
+    background-color: #222831;
+    color: #EEEEEE;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.formBtn:hover {
+    opacity: 0.9;
+}
+
+/* productwrite.php */
+#adminpage{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#adminpage form{
+    width: 80%;
+}
+#adminpage table{
+    width: 100%;
+    line-height: 46px;
+    text-align: center;
+}
+#adminpage td:nth-child(1){
+    width: 25%;
+}
+#adminpage td:nth-child(2){
+    width: 75%;
+    padding: 10px;
+}
+#adminpage input{
+    width: 100%;
+    height: 30px;
+    font-size: 22px;
+}
+#adminpage textarea{
+    width: 100%;
+    font-size: 22px;
+}
+#adminpage select{
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+}
+#adminpage button{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    width: 40%;
+    margin: 2.5%;
+    height: 40px;
+}
+/* prodcutwrite.php끝 */
+
+/* search.php 시작 */
+/* 검색 테이블 */
+#searchItems {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+#searchItems h2 {
+    padding-bottom: 20px;
+    font-size: 26px;
+}
+#searchItems form {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+#searchItems table {
+    width: 50%;
+    margin: 20px 0;
+}
+#searchItems table tr {
+    line-height: 50px;
+}
+#searchItems table tr:nth-child(1) select {
+    width: 92%;
+}
+#searchItems table tr:nth-child(2) select {
+    width: 20%;
+}
+#searchItems table tr:nth-child(2) input {
+    width: 71%;
+}
+#searchItems table tr:nth-child(3) input {
+    width: 44%;
+}
+#searchItems table th {
+    width: 20%;
+    font-size: 14px;
+    text-align: left;
+} 
+#searchItems table td {
+    width: 80%;
+}
+#searchItems table select {
+    padding: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+#searchItems table input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: 0;
+}
+.resultBtn {
+    border: 0;
+    background-color: #222831;
+    border-radius: 3px;
+    color: #e8e8e8;
+    width: 20%;
+    height: 35px;
+    margin-left: 40%;
+}
+/* 상품 검색 결과 */
+#resultItems {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.resultText {
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin: 20px 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.resultText ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.resultText ul li{
+    margin: 0 5px;
+}
+.resultData {
+    margin: 20px 0;
+    min-height: 500px;
+}
+.resultTable{
+    min-height: 500px;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+.resultTable tr{
+    width: 100%;
+    border-bottom:1px solid #ccc;
+}
+.resultTable td:first-child{
+    width: 200px;
+    height: 200px;
+}
+.resultTable td:first-child img{
+    width: 100%;
+}
+
+/* search.php 끝 */
+
+
+/* productlist */
+.adminproductlist{
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid #333;
+}
+.adminproductlist th,.adminproductlist td{
+    border: 1px solid #333;
+}
+.adminproductlist td:first-child{
+    width: 100px;
+    height: 100px;
+}
+.adminproductlist td:first-child img{
+    width: 100%;
+}
+#adminpage #recommend input{
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    margin: 20px;
+}
+
+/* productlist 끝 */
+
+/* detailview.php 시작 */
+#detailPage {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+    display: flex;
+}
+#productImg {
+    width: 50%;
+    padding: 40px;
+}
+#productImg img {
+    width: 100%;
+}
+#buyInfo {
+    width: 50%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+}
+#buyInfo h3 {
+    border-top: 3px solid #222831;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 20px 10px;
+    font-size: 18px;
+}
+.prodInfo {
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.prodInfo nav {
+    padding: 0 10px;
+}
+.prodInfo p {
+    margin: 20px 0;
+}
+.prodInfo .span1 {
+    font-size: 12px;
+    margin-right: 100px;
+}
+.prodInfo .span2 {
+    font-size: 14px;
+}
+#buyPrice {
+    width: 100%;
+}
+#buyPrice .span1 {
+    font-size: 12px;
+    color: #777;
+    padding: 0 10px;
+}
+/* 테이블 */
+.buyTable {
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    width: 100%;
+    border-top: 2px solid #393E46;
+}
+.buyTable .span0 {
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.buyTable .span2 {
+    font-size: 12px;
+    padding-left: 10px;
+}
+.buyTable tr {
+    height: 50px;
+}
+.buyTable tr td:nth-child(1) {
+    width: 50%;
+    text-align: left;
+}
+.buyTable tr td:nth-child(2) {
+    width: 25%;
+    text-align: center;
+}
+.buyTable tr td:nth-child(3) {
+    width: 25%;
+    text-align: center;
+}
+.buyTable td {
+    border-bottom: 1px solid #e8e8e8;
+}
+#amountbox {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+.buyTable #amount {
+    width: 25%;
+    padding: 4px 6px;
+    outline: 0;
+    border: 0;
+    border: 1px solid #ccc;
+    
+}
+.buyTable nav {
+    display: flex;
+    flex-direction: column;
+}
+.btn3 {
+    border: 0;
+    background-color: #e8e8e8;
+    color: #393E46;
+    font-size: 10px;
+    width: 20px;
+    height: 12.5px;
+}
+.increbtn {
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.decrebtn {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.total {
+    font-size: 18px;
+}
+/* 구매 / 장바구니 버튼 */
+#buyBtn {
+    width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+}
+.btn4 {
+    margin: 0 10px;
+    padding: 15px 40px;
+    font-weight: bold;
+    color: #222831;
+    background-color: #fff;
+    border: 3px solid #e8e8e8; 
+}
+.buybtn {
+    transition: 0.5s;
+}
+.buybtn:hover {
+    border: 3px solid #222831;
+    background-color: #222831;
+    color: #FFD369;
+}
+.cartbtn {
+    transition: 0.5s;
+}
+.cartbtn:hover {
+    border: 3px solid #222831; 
+}
+/* detailview.php 끝 */
+
+/* Listview.php */
+#Listview{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#Listview .route{
+    height: 20px;
+    margin: 15px 0;
+}
+#Listview .route ol{
+    float: right;
+    display: flex;
+}
+#Listview .route ol li:not(:first-child)::before{
+    font-size: 7px;
+    margin: -2px 3px 0 4px;
+    font-weight: normal;
+    vertical-align: middle;
+    display: inline-block;
+    content: ">";
+}
+#Listview .ad p{
+    height: 160px;
+}
+#Listview .ad p img{
+    width: 100%;
+    height: 100%;
+}
+#Listview .ad h2{
+    margin: 20px 0;
+    font-size: 24px;
+}
+#Listview .submenu{
+    height: 100px;
+    width: 100%;
+}
+#Listview .function{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#Listview .productcount::before{
+    content: "Total";
+    font-size: 12px;
+}
+#Listview .productcount::after{
+    content: "Items";
+    font-size: 12px;
+}
+#Listview .function{
+    height: 35px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+#Listview .function ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Listview .function ul li{
+    padding: 0 8px;
+}
+#Listview .function ul li:not(:last-child){
+    border-right: 1px solid #ccc;
+}
+#Listview .listproduct .listviewLists{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#Listview .listproduct .listviewLists li{
+    width: 23%;
+    vertical-align: top;
+    margin: 1%;
+}
+
+#Listview .listproduct .listviewLists li img{
+    width: 100%;
+}
+#Listview .pagemove{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#Listview .pagemove li{
+    width: 25px;
+    line-height: 25px;
+    display: inline-block;
+    margin: 0 0 0 -1px;
+    border: 1px solid #d7d5d5;
+    font-size: 12px;
+    color: #757575;
+}
+#Listview .pagemove ol li a{
+    padding: 0;
+    border: 0;
+    background: #f1f1f1;
+    color: #000;
+    font-weight: bold;
+}
+#Listview .product2{
+    min-height: 100%;
+    height:350px ;
+
+}
+/* Listview.php끝 */
+
+/* shop_cart.php 시작 */
+#shopcart {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#shopcart h2 {
+    padding: 40px 0;
+}
+#prodcamount {
+    border-bottom: 1px solid #e8e8e8;
+    margin-top: 40px;
+}
+#prodcamount li {
+    width: 200px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #222831;
+    color: #e8e8e8;
+}
+.path ul{
+    display:flex;
+}
+.path{
+    margin-top:30px;
+}
+/* 장바구니에 담긴 상품 없을 때 화면 */
+#noneproduct ul {
+    color: #777;
+    margin: 60px 0;
+}
+#noneproduct ul i {
+   font-size: 38px;
+}
+#noneproduct ul li {
+    padding: 5px 0;
+ }
+/* 장바구니 테이블 */
+#shopcartTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+/* #shopcartTable .span0 {
+    padding: 0 10px;
+} */
+/* 테이블 td 너비  */
+#shopcartTable tr td:nth-child(1) {
+    text-align: center;
+    width: 5%;
+}
+#shopcartTable tr td:nth-child(2) {
+    text-align: center;
+    width: 10%;
+}
+#shopcartTable tr td:nth-child(3) {
+    text-align: center;
+    width: 35%;
+}
+#shopcartTable tr td:nth-child(4) {
+    text-align: center;
+    width: 10%;
+}
+#shopcartTable tr td:nth-child(5) {
+    text-align: center;
+    width: 10%;
+}
+#shopcartTable tr td:nth-child(6) {
+    text-align: center;
+    width: 10%;
+}
+#shopcartTable tr td:nth-child(7) {
+    text-align: center;
+    width: 20%;
+}
+/* 체크박스 커스텀 ----------------------- */
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: -6px;
+    left: 20px;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/* 체크박스 ----------------------------- */
+
+thead {
+    height: 50px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+tbody {
+    height: 100px;
+}
+tbody img {
+    width: 60%;
+}
+tbody #amountbox {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#amount {
+    width: 25%;
+    padding: 4px 6px;
+    outline: 0;
+    border: 0;
+    border: 1px solid #ccc; 
+}
+tbody .updownbtn {
+    display: flex;
+    flex-direction: column;
+}
+#selecbtn {
+    width: 50%;
+    height: 100px;
+    margin-left: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.btn5 {
+    padding: 8px 15px;
+}
+.orderbtn {
+    background: #222831;
+    border: 1px solid #222831;
+    border-radius: 3px;
+    color: #e8e8e8;
+    transition: 0.5s;
+}
+.orderbtn:hover {
+    opacity: 0.8;
+}
+.deletebtn {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.deletebtn:hover {
+    background: #e8e8e8;
+    opacity: 0.8;
+}
+
+tfoot {
+    height: 50px;
+}
+.totalorder {
+    line-height: 50px;
+    background-color: #e8e8e8;
+    padding-left: 750px;
+}
+/* 테이블 끝 */
+#alldelete {
+    margin: 40px 0;
+    padding: 20px 10px;
+    border-top: 1px solid #e8e8e8;
+}
+#alldelete li {
+    display: flex;
+    align-items: center;
+}
+#alldelete li span {
+    font-size: 14px;
+    margin-right: 10px;
+}
+#alldelete li .btn6 {
+    padding: 8px 14px;
+    background-color: #777;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+#alldelete li .btn6:hover {
+    background-color: #555;
+}
+#orderBtn {
+    width: 50%;
+    margin-left: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+#orderBtn .btn7 {
+    padding: 12px 20px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.allorder {
+    background: #222831;
+    color: #e8e8e8;
+    border: 1px solid #222831;
+    transition: 0.5s;
+    
+}
+.allorder:hover {
+    color: #FFD369;
+}
+.selectorder {
+    background: #222831;
+    border: 1px solid #ccc;
+    color: #e8e8e8;
+    transition: 0.5s;
+}
+.selectorder:hover {
+    background-color: #e8e8e8;
+    color: #222831;
+}
+.continue {
+    padding: 3px 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.continue:hover {
+    background: #e8e8e8;
+    opacity: 0.8;
+}
+/* shop_cart.php 끝 */
+/* findid.php / findpw.php 시작 */
+#findid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#findid h2 {
+    padding: 80px 0;
+}
+#findid_border {
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    width: 50%;
+    height: 300px;
+    padding: 40px 100px;
+    margin-left: 25%;
+}
+#findidDiv {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#findidDiv .span0 {
+    text-align: center;
+    padding: 10px 0;
+}
+#findidDiv .span1 {
+    width: 30px;
+    margin-right: 100px;
+}
+#findidDiv .span2 {
+    width: 30px;
+    margin-right: 85px;
+}
+#findidDiv form p {
+    padding: 10px 0;
+}
+#findidDiv input {
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: 0;
+}
+#findidDiv nav {
+    text-align: center;
+    padding: 10px 0;
+}
+.btn8 {
+    padding: 4px 25px;
+    border: 0;
+    border-radius: 3px;
+    font-weight: bold;
+}
+#findidDiv .findbtn {
+    background-color: #222831;
+    border: 1px solid #222831;
+    color: #e8e8e8;
+    transition: 0.5s;
+}
+#findidDiv .cancelbtn {
+    background-color: #e8e8e8;
+    border: 1px solid #ccc;
+    transition: 0.5s;
+}
+.btn8:hover {
+    opacity: 0.8;
+}
+#findid_go {
+    font-size: 14px;
+    text-align: center;
+    border-top: 1px solid #e8e8e8;
+    padding-top: 10px;
+}
+#findid_go a {
+    padding: 0 10px;
+}
+
+#findpw {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#findpw h2 {
+    padding: 80px 0;
+}
+#findpw_border {
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    width: 50%;
+    height: 300px;
+    padding: 40px 100px;
+    margin-left: 25%;
+}
+#findpwDiv {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#findpwDiv .span0 {
+    text-align: center;
+    padding: 10px 0;
+}
+#findpwDiv .span1 {
+    width: 30px;
+    margin-right: 85px;
+}
+#findpwDiv .span2 {
+    width: 30px;
+    margin-right: 85px;
+}
+#findpwDiv form p {
+    padding: 10px 0;
+}
+#findpwDiv input {
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: 0;
+}
+#findpwDiv nav {
+    text-align: center;
+    padding: 10px 0;
+}
+.btn8 {
+    padding: 4px 25px;
+    border: 0;
+    border-radius: 3px;
+    font-weight: bold;
+}
+#findpwDiv .findbtn {
+    background-color: #222831;
+    border: 1px solid #222831;
+    color: #e8e8e8;
+    transition: 0.5s;
+}
+#findpwDiv .cancelbtn {
+    background-color: #e8e8e8;
+    border: 1px solid #ccc;
+    transition: 0.5s;
+}
+.btn8:hover {
+    opacity: 0.8;
+}
+#findpw_go {
+    font-size: 14px;
+    text-align: center;
+    border-top: 1px solid #e8e8e8;
+    padding-top: 10px;
+}
+#findpw_go a {
+    padding: 0 10px;
+}
+/* findid.php / findpw.php 끝 */
+
+/*mypage.php 시작*/
+#mypage {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#mypage h2 {
+    padding: 20px 0;
+}
+/* 회원 정보 창 */
+#userzone {
+    padding: 40px 0;
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+#userzone #userleft {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+#userzone #userleft .userimg {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 50%;  
+    margin: 10px 0;
+}
+#userzone #userleft .userimg img {
+    transform: translateY(10px)
+}
+#userzone #userleft span {
+    margin: 5px 0;
+}
+#userzone #userleft .span0 {
+    color: #777;
+}
+#userzone #userright {
+    width: 80%;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#userzone #userright p {
+    padding: 10px 10px;
+    color: #777;
+    border-bottom: 1px solid #e8e8e8;
+}
+#userzone #userright .span1 {
+    color: #222831;
+}
+#userzone #userright .userlist {
+    padding: 0 10px;
+    margin-top: 20px;
+    display: flex;
+}
+#userzone #userright .userlist li {
+    padding-right: 16px;
+    font-weight: bold;
+}
+/* 주문 상품 정보 */
+#orderInfo {
+    padding: 40px 0;
+}
+#orderInfo p {
+    padding: 20px 0;
+}
+#orderInfo p i {
+    padding-right: 10px;
+}
+/* 주문 상품 정보 테이블 */
+#orderInfoTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ccc;
+    /* border-radius: 3px; */
+}
+#orderInfoTable thead {
+    font-size: 14px;
+    background-color: #e8e8e8;
+}
+#orderInfoTable tbody {
+    text-align: center;
+}
+#orderInfoTable img {
+    width: 50%;
+}
+/* 최근 본 상품 */
+#recently {
+    padding: 40px 0;
+}
+#recently p {
+    padding: 20px 0;
+}
+#recently p i {
+    padding-right: 10px;
+}
+/* 최근 본 상품이 없을 때 화면 */
+#nonerecently p {
+    color: #777;
+}
+/* 최근 본 상품 테이블 */
+#recentlyTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+#recentlyTable thead {
+    font-size: 14px;
+    background-color: #e8e8e8;
+}
+#recentlyTable tbody {
+    text-align: center;
+}
+#recentlyTable img {
+    width: 50%;
+}
+#recentlyTable #selecbtn {
+    width: 40%;
+    height: 100px;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+/*mypage.php끝*/
+
+/* orderform.php 시작 */
+#oderpage {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.path {
+    font-size: 12px;
+    padding: 20px 10px;  
+}
+.path a {
+    padding-right: 5px;
+}
+.path ul{
+    display: flex;
+    justify-content: flex-end;
+}
+#orderform h2 {
+    padding: 40px 0;
+}
+/* 주문 테이블에 아무 것도 없을 때 화면 */
+#noneorder p {
+    padding: 60px 0;
+    color: #777;
+}
+/* 주문서 테이블 */
+#orderTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+#orderTable thead {
+    border-bottom: 1px solid #e8e8e8;
+}
+#orderTable tbody {
+    text-align: center;
+}
+#alldelete1 {
+    margin: 40px 0;
+    padding: 20px 10px;
+    border-top: 1px solid #e8e8e8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#alldelete1 li {
+    display: flex;
+    align-items: center;
+}
+#alldelete1 li span {
+    font-size: 14px;
+    margin-right: 10px;
+}
+#alldelete1 li .btn6 {
+    padding: 8px 14px;
+    background-color: #777;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+#alldelete1 li .btn6:hover {
+    background-color: #555;
+}
+#alldelete1 .prevpage {
+    padding: 4px 14px;
+    background-color: #fff;
+    border:  1px solid #222831;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+#alldelete1 .prevpage:hover {
+    background-color: #e8e8e8;
+}
+/* 배송정보 */
+#delInfo nav {
+    border-bottom: 1px solid #e8e8e8;
+}
+#delInfo .span0 {
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+}
+/* 배송정보 테이블 */
+#delinfoTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+#delinfoTable .span1 {
+    font-size: 14px;
+    padding: 0 10px;
+}
+#delinfoTable .span2 {
+    font-size: 14px;
+}
+#delinfoTable tr {
+    border-bottom: 1px solid #e8e8e8;
+}
+#delinfoTable input {
+    padding: 5px;
+    border:  1px solid #ccc;
+    border-radius: 3px;
+    outline: 0;
+}
+#delinfoTable .address {
+    margin: 3px 0;
+}
+#delinfoTable .emailinfo {
+    font-size: 14px;
+    margin: 5px 0;
+}
+#delinfoTable select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: 0;
+}
+#delinfoTable textarea {
+    width: 70%;
+    height: 80px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: 0;
+    resize: none;
+}
+/* 주문 버튼 */
+#orderbtn2 {
+    text-align: center;
+    padding: 20px 0;
+}
+#orderbtn2 button {
+    padding: 10px 30px;
+    border-radius: 3px;
+    background-color: #222831;
+    border: 1px solid #222831;
+    color: #e8e8e8;
+    transition: 0.5s;
+}
+#orderbtn2 button:hover {
+    opacity: 0.8;
+    color: #FFD369;
+}
+/* orderform.php 끝 */
+
+/* editpw.php */
+#editpw{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#editpw h2{
+    padding: 80px 0;
+}
+#editpw_border {
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    width: 50%;
+    height: 250px;
+    padding: 40px 100px;
+    margin-left: 25%;
+}
+#editpw .span0{
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+#editpwdiv{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#editpwdiv form p {
+    padding: 10px 0;
+}
+#editpwdiv .span1 {
+    width: 30px;
+    margin-right: 85px;
+}
+#editpwdiv .span2 {
+    width: 30px;
+    margin-right: 50px;
+}
+#editpwdiv input {
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: 0;
+}
+#editpwdiv nav {
+    text-align: center;
+    padding: 10px 0;
+}
+#editpwdiv .findbtn {
+    background-color: #222831;
+    border: 1px solid #222831;
+    color: #e8e8e8;
+    transition: 0.5s;
+}
+#editpwdiv .cancelbtn {
+    background-color: #e8e8e8;
+    border: 1px solid #ccc;
+    transition: 0.5s;
+}
+
+/* editpw.php끝 */
